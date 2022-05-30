@@ -1,0 +1,132 @@
+﻿<html>
+
+<head>
+<meta charset="UTF-8"> 
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<link rel="stylesheet" type="text/css" href="hytter.css">
+
+<style>
+
+
+.img {
+
+border-radius: 60%;
+display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+ 
+ 
+
+
+h2 {
+text-align: center;
+}
+
+
+
+</style>
+</head>
+
+
+<body>
+
+<div id="nav-placeholder">
+</div>
+<script>
+$(function(){
+  $("#nav-placeholder").load("headFR.html");
+});
+</script>
+
+<br>
+<br>
+
+<h2>Les chalets</h2>
+<img src="hytteview.jpg" class="img" height="200" width="300" align="middle"> 
+
+<br>
+Le camping dispose de 6 chalets (bungalows ou " hytter "):
+<br><br>
+1x : chalet 6-10 personnes
+<br>
+<br>
+2x : chalet 3-6 personnes
+<br>
+<br>
+3x : chalet 2 personnes
+</div>
+<div class="text">
+<p>A l'exception des chalets pour 2 personnes, tous les chalets sont très luxueux et parfaits pour un long séjour. Ils sont équipés d'une douche, toilette, chauffage par le sol, cuisine, coin salon, coin-repas, télévision, etc </p>
+
+<p>Les chalets pour 3-6 personnes ont une chambre à coucher pour 3 personnes et un canapé-lit dans la salle de séjour. Le chalet pour 6-10 personnes a deux chambres à coucher pour 3 personnes et un grenier où 4 personnes peuvent dormir.
+ </p>
+
+<p>Les cuisines sont pourvues d'un réfrigérateur, plaque de cuisson, four, hotte aspirante, cafetière électrique et service. De votre propre terrasse, vous pouvez jouir de la vue magnifique sur le lac Norefjord. </p>
+
+<p>Les chalets pour 2 personnes sont simplement équipés de lits superposés, un coin salon simple, une plaque de cuisson et un réfrigérateur.
+ </p>
+
+<p> Vous devez apporter votre propre literie, comme des draps et des drap-housses. Vous pouvez éventuellement louer un paquet de linge chez nous.</p>
+
+<p>Il y a assez d'espace à côté de tous les chalets pour garer une ou plusieurs voiture(s). </p>
+
+
+<div style="text-align:center">
+  <h2></h2>
+  <p>Click on the images below:</p>
+</div>
+
+<!-- The four columns -->
+<div class="row">
+  <div class="column">
+    <img src="hyttest.jpg"  style="width:100%" onclick="myFunction(this);">
+  </div>
+  
+  <div class="column">
+    <img src="sovhytte.jpg"  style="width:70%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="hyttespis.jpg"  style="width:70%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="hyttekj.jpg"  style="width:90%" onclick="myFunction(this);">
+  </div>
+</div>
+
+<div style="text-align:center">
+<div class="container">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <img id="expandedImg" style="width:500px">
+  <div id="imgtext"></div>
+</div>
+</div>
+
+
+<script>
+function myFunction(imgs) {
+    var expandImg = document.getElementById("expandedImg");
+    var imgText = document.getElementById("imgtext");
+    expandImg.src = imgs.src;
+    imgText.innerHTML = imgs.alt;
+    expandImg.parentElement.style.display = "block";
+}
+</script>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div id="nav-placeholder1">
+</div>
+
+<script>
+$(function(){
+  $("#nav-placeholder1").load("bottom.html");
+});
+</script>
+
+</body>
+
+</html>

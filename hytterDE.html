@@ -1,0 +1,128 @@
+﻿<html>
+
+<head>
+<meta charset="UTF-8"> 
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<link rel="stylesheet" type="text/css" href="hytter.css">
+
+<style>
+
+
+.img {
+
+border-radius: 60%;
+display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+ 
+ 
+
+
+h2 {
+text-align: center;
+}
+
+
+
+</style>
+</head>
+
+
+<body>
+
+<div id="nav-placeholder">
+</div>
+<script>
+$(function(){
+  $("#nav-placeholder").load("headDE.html");
+});
+</script>
+
+<br>
+<br>
+
+<h2>Die Chalets</h2>
+<img src="hytteview.jpg" class="img" height="200" width="300" align="middle"> 
+
+<br>
+1x Hütten:   6-10 Persons
+<br><br>
+3x Hütten:  3-6 Persons
+<br><br>
+2x Hütten:  2-3 Persons
+
+<br>
+
+<p>Die Chalets sind, mit Ausnahme der 2-Persons Hütten, sehr luxuriös ausgstattet und eignen sich besonders für einen längeren Aufenthalt. So sind diese Chalets alle versehen von Dusche, Toilette, Fussbodenheizung, Küche, Sitzecke, Eßtisch, Fernseher, usw.</p>
+
+<p>Di 2-Persons Hütten sind einfach ausgestattet und versehen von einem Etagenbett, Sitzecke, Kochherd und Kühlschrank.<br>
+Die 3-6 Persons Chalets haben 1 Schlafzimmer für  3 Personen sowie eine Schlafbank im Wohnzimmer. <br>Das 6-10 Persons Chalet verfügt über 2 Schlafzimmer für 3 Personen und eine obere Etage wo 4 Personen schlafen können.</p>
+
+<p>Die Küche ist ausgestattet mit einem Kühlschrank, Kochherd, Backofen, Dunstabzugshaube, Kaffeemaschine und Geschirr.</p>
+
+<p> Die Chalets befinden sich direct am Rande des Fjords. Von Ihrer Terasse aus können Sie so von dem herrlichen Blick des Norefjords genießen.</p>
+
+
+<p>Ihre Bettwäsche sowie Kissen, Bettlaken, Deckbetten, Schlaffsäcke, usw.  sollten Sie mitnehmen. Aber an unserer Rezeption können Sie auch Bettwäsche mieten.</p>
+
+<p>Alle Chalets und 'Hytter' bieten ausreichend Platz um Ihr PKW zu parken.</p>
+
+
+<div style="text-align:center">
+  <h2></h2>
+  <p>Click on the images below:</p>
+</div>
+
+<!-- The four columns -->
+<div class="row">
+  <div class="column">
+    <img src="hyttest.jpg"  style="width:100%" onclick="myFunction(this);">
+  </div>
+  
+  <div class="column">
+    <img src="sovhytte.jpg"  style="width:70%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="hyttespis.jpg"  style="width:70%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="hyttekj.jpg"  style="width:90%" onclick="myFunction(this);">
+  </div>
+</div>
+
+<div style="text-align:center">
+<div class="container">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <img id="expandedImg" style="width:500px">
+  <div id="imgtext"></div>
+</div>
+</div>
+
+<script>
+function myFunction(imgs) {
+    var expandImg = document.getElementById("expandedImg");
+    var imgText = document.getElementById("imgtext");
+    expandImg.src = imgs.src;
+    imgText.innerHTML = imgs.alt;
+    expandImg.parentElement.style.display = "block";
+}
+</script>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div id="nav-placeholder1">
+</div>
+
+<script>
+$(function(){
+  $("#nav-placeholder1").load("bottom.html");
+});
+</script>
+</body>
+
+</html>

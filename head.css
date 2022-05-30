@@ -1,0 +1,141 @@
+.h1 {
+padding: 0.5em;
+font-family: Arial, Helvetica, sans-serif;
+	font-size: 37px;
+	font-style: normal;
+	font-variant: normal;
+	line-height: 0px;
+	text-align: center;
+background-color: #cdcdb1;
+color:#3d3d29;
+
+}
+
+.textcenter {
+text-align: center;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #cdcdb1;
+    font-family: Arial, Helvetica, sans-serif;
+    s
+  
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: #6d6d46;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown1 {
+    float: left;
+    overflow: hidden;
+}
+
+
+.dropdown .dropbtn {
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: #6d6d46;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    
+}
+
+.dropdown1 .dropbtn1 {
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: #6d6d46;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: #f5f5ef;
+}
+
+.navbar a:hover, .dropdown1:hover .dropbtn1 {
+    background-color: #f5f5ef;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    width: 100%;
+}
+
+.dropdown-content1 {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: #6d6d46;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content1 a {
+    float: none;
+    color: #6d6d46;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown-content1 a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown1:hover .dropdown-content1 {
+    display: block;
+}
+
+
+
+body {
+background-color: #f5f5ef;
+text-align: justify;
+}
+
+
+
+
+

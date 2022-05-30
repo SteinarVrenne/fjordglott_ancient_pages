@@ -1,0 +1,115 @@
+﻿<html>
+
+<head>
+<meta charset="UTF-8"> 
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<link rel="stylesheet" type="text/css" href="camping.css">
+
+<style>
+
+
+.img3 {
+
+border-radius: 60%;
+display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+ 
+ 
+.textcenter{
+padding: 2em;
+
+}
+
+h2 {
+text-align: center;
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div id="nav-placeholder">
+</div>
+<script>
+$(function(){
+  $("#nav-placeholder").load("headNE.html");
+});
+</script>
+
+<br>
+<br>
+
+<h2>Fjordgløtt Camping in Rødberg, Noorwegen.</h2>
+<img src="natur.jpg" class="img3" height="200" width="300" align="middle">
+<div class="textcenter">
+<p>Fjordgløtt betekent "fjordzicht" en ligt direct aan het Norefjord, een groot meer tussen Nore en Rødberg. Rødberg hoort bij de gemeente Nore og Uvdal in de provincie Buskerud. De camping bevindt zich ca. 6 km ten zuiden van Rødberg. Vanaf de E40 (de hoofdweg van Kongsberg naar Geilo) is het ca 1600 meter naar de camping. De camping grenst aan het Hardangervidda Natuurpark, een geweldig mooi gebied om te wandelen, langlaufen of skiën. Dit is het grootste bergplateau in Europa. Maar meer over de omgeving vindt u elders op de site </p>
+<p> De camping heeft 75 ruime plaatsen voor caravans, tenten of campers. Uiteraard is er overal elektriciteit aanwezig. Daarnaast hebben we een aantal hoge standaard hytter of challets maar daarover meer info elders op de site. </p>
+<p>Wij hebben een zeer modern en luxe sanitairgebouw voorzien van douche, toilet, sauna en solarium. Tevens is op de camping een kampwinkel aanwezig. Voor de kinderen is er een ruime speelweide met een trampoline, schommel etc.  </p>
+<p>Zoals gezegd ligt Fjordgløtt camping aan een groot meer, het Norefjord. Naast zwemmen kunt u hier perfect vissen op o.a. forel. In de winter kunt u hier zelfs ijsvissen! Voor het vertier op het water verhuren wij boten, kano's en waterfietsen. Voor de veiligheid van de kinderen hebben we zwemvesten te huur. </p>
+<br><br><br>
+
+</div>
+
+<br>
+
+<div style="text-align:center">
+  <h2></h2>
+  <p>Click on the images below:</p>
+</div>
+
+<!-- The four columns -->
+<div class="row">
+  <div class="column">
+    <img src="camp1.jpg"  style="width:100%" onclick="myFunction(this);">
+  </div>
+  
+  <div class="column">
+    <img src="camp2.jpg"  style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="camp3.jpg"  style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="camp4.jpg"  style="width:100%" onclick="myFunction(this);">
+  </div>
+</div>
+
+<div style="text-align:center">
+<div class="container">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <img id="expandedImg" style="width:800px">
+  <div id="imgtext"></div>
+</div>
+</div>
+
+<script>
+function myFunction(imgs) {
+    var expandImg = document.getElementById("expandedImg");
+    var imgText = document.getElementById("imgtext");
+    expandImg.src = imgs.src;
+    imgText.innerHTML = imgs.alt;
+    expandImg.parentElement.style.display = "block";
+}
+</script>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div id="nav-placeholder1">
+</div>
+
+<script>
+$(function(){
+  $("#nav-placeholder1").load("bottom.html");
+});
+</script>
+
+</body>
+
+</html>

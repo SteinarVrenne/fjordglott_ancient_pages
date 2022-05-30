@@ -1,0 +1,117 @@
+﻿<html>
+
+<head>
+<meta charset="UTF-8"> 
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<link rel="stylesheet" type="text/css" href="camping.css">
+
+<style>
+
+
+
+.img {
+
+border-radius: 60%;
+display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+ 
+ 
+.textcenter{
+padding: 2em;
+
+}
+
+h2 {
+text-align: center;
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div id="nav-placeholder">
+</div>
+<script>
+$(function(){
+  $("#nav-placeholder").load("headFR.html");
+});
+</script>
+
+<br>
+<br>
+
+<h2>Fjordgløtt Camping</h2>
+<img src="natur.jpg" class="img" height="200" width="300" align="middle">
+<div class="textcenter">
+<p> Fjordgløtt signifie "vue sur le fjord" et se trouve tout près du Norefjord, un grand lac entre Nore et Rødberg. Rødberg fait partie de la municipalité de Nore og Uvdal, dans la province de Buskerud. Le camping se trouve à environ 6 km. au sud de Rødberg. A partir de l'E40 (la route principale de Kongsberg à Geilo), c'est encore 1600 mètres pour arriver au camping. Celui-ci avoisine le Parc naturel Hardangervidda, un domaine magnifique pour se promener, faire du ski ou du ski de fond. C'est le plateau de montagne le plus grand en Europe. Vous trouverez plus d'infos sur les environs sous l'onglet " activités "</p>
+<p>Le camping dispose de 75 places pour des caravanes, tentes ou camping-cars. Naturellement, il y a de l'électricité partout. En plus, nous avons plusieurs chalets (" hytter ") de très bonne qualité, plus d'infos sous l'onglet " chalets ". </p>
+<p> Nous disposons d'un bâtiment sanitaire très moderne et luxueux, pourvu de douches, toilettes, sauna et solarium. Nous avons un magasin sur le camping. Pour les enfants, il y a un terrain de jeu étendu avec une trampoline, une balançoire, etc.</p>
+<p> Comme nous avons déjà mentionné, le camping Fjordgløtt se trouve tout près d'un grand lac, le Norefjord. Vous pouvez y nager, mais aussi pêcher, e.a. la truite. En hiver, vous pouvez même pêcher sur glace ! Pour s'amuser dans l'eau, nous louons des bateaux, des canoës et des pédalos. Pour la sécurité des enfants, nous avons des gilets de sauvetage à louer. </p>
+
+<br><br><br>
+
+</div>
+
+<br>
+
+<div style="text-align:center">
+  <h2></h2>
+  <p>Click on the images below:</p>
+</div>
+
+<!-- The four columns -->
+<div class="row">
+  <div class="column">
+    <img src="camp1.jpg"  style="width:100%" onclick="myFunction(this);">
+  </div>
+  
+  <div class="column">
+    <img src="camp2.jpg"  style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="camp3.jpg"  style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="camp4.jpg"  style="width:100%" onclick="myFunction(this);">
+  </div>
+</div>
+
+<div style="text-align:center">
+<div class="container">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <img id="expandedImg" style="width:800px">
+  <div id="imgtext"></div>
+</div>
+</div>
+
+<script>
+function myFunction(imgs) {
+    var expandImg = document.getElementById("expandedImg");
+    var imgText = document.getElementById("imgtext");
+    expandImg.src = imgs.src;
+    imgText.innerHTML = imgs.alt;
+    expandImg.parentElement.style.display = "block";
+}
+</script>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div id="nav-placeholder1">
+</div>
+
+<script>
+$(function(){
+  $("#nav-placeholder1").load("bottom.html");
+});
+</script>
+
+</body>
+
+</html>

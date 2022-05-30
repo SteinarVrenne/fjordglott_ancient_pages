@@ -1,0 +1,131 @@
+﻿<html>
+
+<head>
+<meta charset="UTF-8">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<link rel="stylesheet" type="text/css" href="hytter.css">
+
+<style>
+
+
+
+.img2 {
+
+border-radius: 60%;
+display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+
+
+
+h2 {
+text-align: center;
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div id="nav-placeholder">
+</div>
+<script>
+$(function(){
+  $("#nav-placeholder").load("head.html");
+});
+</script>
+
+<br>
+<br>
+
+<h2>Våre hytter</h2>
+<img src="hytteview.jpg" class="img2" height="200" width="300" align="middle">
+<br>
+<br>
+
+På campingplassen tilbyr vi hytter i ulik størrelse.
+<br>
+Man kan velge mellom følgende hytter:
+<br>
+<br>
+Hytte A: 6 - 8 personer, 1 bad, 2 soverom og hems. Kjøkken med mikrobølgeovn og kaffetrakter. Varme i alle gulv. Tv. Terrasse
+<br>
+<br>
+Hytte B: 3 – 6 personer, 1 bad, 1 soverom. Komfyr, kjøleskap, kaffetrakter og tv. Varme i alle gulv. Terrasse.
+<br>
+<br>
+Hytte C: 2 – 3 personer, kjøleskap og kokeplate, 1 rom med bad i fellesanlegg.
+<br>
+<br>
+Bestille hytte? Send mail til <a href="mailto:post@fjordglott.net" target="_top">post@fjordglott.net</a>
+
+
+</p>
+
+
+
+<br>
+
+<div style="text-align:center">
+  <h2>Bilder av våre hytter</h2>
+  <p>Click on the images below:</p>
+</div>
+
+
+
+
+<div class="row">
+  <div class="column">
+    <img src="hyttest.jpg"  style="width:100%" onclick="myFunction(this);">
+  </div>
+
+  <div class="column">
+    <img src="sovhytte.jpg"  style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="hyttespis.jpg"  style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="hyttekj.jpg"  style="width:100%" onclick="myFunction(this);">
+  </div>
+</div>
+
+<div style="text-align:center">
+<div class="container">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <img id="expandedImg" style="width:700px">
+  <div id="imgtext"></div>
+</div>
+</div>
+
+<script>
+function myFunction(imgs) {
+    var expandImg = document.getElementById("expandedImg");
+    var imgText = document.getElementById("imgtext");
+    expandImg.src = imgs.src;
+    imgText.innerHTML = imgs.alt;
+    expandImg.parentElement.style.display = "block";
+}
+</script>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<div id="nav-placeholder1">
+</div>
+
+<script>
+$(function(){
+  $("#nav-placeholder1").load("bottom.html");
+});
+</script>
+</body>
+
+</html>

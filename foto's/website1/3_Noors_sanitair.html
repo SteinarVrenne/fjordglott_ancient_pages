@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE></TITLE>
+<META NAME="GENERATOR" CONTENT="WEB! 2.0 Pro Extended Edition">
+<STYLE>
+#D0 {position:absolute;top:30px;left:30px;width:352px;height:504px;font-size:16px;color:#004000;font-family:arial;z-index:1;}
+#D0m {position:absolute;top:0;left:0;width:352px;height:504px;padding:10px;background:none;text-align:left;}
+#I11 {position:absolute;top:37px;left:395px;width:196px;height:221px;padding:10px;z-index:1;}
+</STYLE>
+<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+function catchError()
+{
+	return true;
+}
+
+window.onerror = catchError;
+
+</SCRIPT>
+<SCRIPT SRC="web.js" TYPE="text/javascript"></SCRIPT>
+</HEAD>
+<BODY  STYLE="background:#eafdb0;"  onLoad="loader();">
+<DIV  ID="D0" ><LAYER NAME="D0m" WIDTH="352" BORDER="10"><DIV ID="D0m"><U PARENT=D0>Sanit&aelig;ranlegg.<BR><BR></U>Sanit&aelig;ranlegget har skiltet romer for damer og herrer. Vi har vasker, toaletter og rommelige dusjrom<BR><BR>Vi har ogs&aring; et romslig familiedusjrom med badstue og et rom med solarium. Denne kan du bestille hver for seg. &nbsp;<BR><BR>I sanit&aelig;ranlegget er ogs&aring; en vaskemaskin, t&oslash;rketrommel og t&oslash;rkeskap.<BR><BR>Ved siden av sinit&aelig;ranlegget har vi to rom. Ei lite og enkelt kj&oslash;kken med kokeplate, ovn og oppvaskbenk. Vi har ogs&aring; et rom for t&oslash;mming av toalett.</DIV></LAYER></DIV>
+<DIV  ID="I11"><IMG SRC="foto's/wasbak.JPG" ID="I11image"  WIDTH="196"  HEIGHT="221"  ALT=""></DIV>
+<!-- DO NOT CHANGE THE SCRIPTS BELOW, WEB! WILL MALFUNCTION IF YOU DO! -->
+<SCRIPT LANGUAGE="JavaScript" ID="WEB!" TYPE="text/javascript">
+var IE = (navigator.appName=="Microsoft Internet Explorer") && (navigator.platform && navigator.platform == 'Win32');
+
+function newSlide(id,next,wait)
+{
+	this.id = id;
+	this.next = next;
+	this.wait = wait;
+	this.elems = new Array();
+	return this;
+}
+
+function newElement(id,next,wait,type,lightRed,lightGreen,lightBlue,lightStrength,waveAnim,waveDir,waves,filter)
+{
+	this.id = id;
+	this.next = next;
+	this.wait = wait;
+	this.type = type;
+	this.filter = filter;								
+
+	if(navigator.appName != 'Netscape')
+	{
+		document.all(id).style.filter = filter;
+		var dur_s = filter.indexOf('Duration=')+9;
+		var dur_e = filter.indexOf(',',dur_s);
+		document.all(id).filters(0).Duration = filter.substring(dur_s,dur_e)*1.0;
+		
+		if(document.all(id).style.filter.toLowerCase().indexOf("light(")!=-1)
+		{
+			document.all(id).filters.light.addAmbient(lightRed,lightGreen,lightBlue,lightStrength);
+		}
+
+		if(waveAnim=="true")
+		{
+			document.all(id).wave = wave;
+			document.all(id).wavedir = waveDir;
+			document.all(id).filters.wave.phase = (waveDir=="up")?0:95;
+			waves[waves.length] = id;
+		}	
+	}
+	
+	return this;
+}
+
+function loader()
+{
+	startMarquees();
+	if(navigator.appName != 'Netscape')
+		startWaves();
+	else	
+		transitions_netscape();
+
+	start();
+}
+
+function wave()
+{
+	if(IE)
+	{
+		if(this.wavedir=="up" && this.filters.wave.phase<100)
+			this.filters.wave.phase = this.filters.wave.phase + 5 % 100;
+		else if(this.wavedir=="down" && this.filters.wave.phase>0)	
+			this.filters.wave.phase = this.filters.wave.phase - 5 % 100;
+		else if(this.wavedir=="up")
+			this.filters.wave.phase=0;
+		else if(this.wavedir=="down")
+			this.filters.wave.phase=95;
+
+		setTimeout(this.id + ".wave()",40);	
+	}
+}
+
+
+var wavesElements = new Array();
+var slides = new Array();
+var marquees = new Object();
+
+//start slide 0
+slides[0] = new newSlide("SL0","timer","0");
+slides[0].elems[0] = new newElement("D0", "timer", "0.0", "div", "255", "0", "0", "50", "false", "up", wavesElements, "revealtrans(Duration=0,Transition=0) ");
+slides[0].elems[1] = new newElement("I11", "timer", "0.0", "image", "255", "0", "0", "50", "false", "up", wavesElements, "revealtrans(Duration=0,Transition=0) ");
+//end slide 0
+
+function changeImage(img,loc)
+{if(IE)
+document.all(img+"image").src = loc;
+else
+
+document.layers[img].document.images[0].src = loc;
+}
+function startMarquees()
+{
+}
+</SCRIPT>
+</BODY>
+</HTML>

@@ -1,0 +1,121 @@
+﻿<html>
+
+<head>
+<meta charset="UTF-8"> 
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<link rel="stylesheet" type="text/css" href="camping.css">
+
+<style>
+
+
+.img {
+
+border-radius: 60%;
+display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+ 
+ 
+.textcenter{
+padding: 2em;
+
+}
+
+h2 {
+text-align: center;
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div id="nav-placeholder">
+</div>
+<script>
+$(function(){
+  $("#nav-placeholder").load("headDE.html");
+});
+</script>
+
+<br>
+<br>
+
+<h2>Fjordgløtt Camping in Rødberg, Norwegen</h2>
+<img src="natur.jpg" class="img" height="200" width="300" align="middle">
+<div class="textcenter">
+
+<p>Fjordgløtt bedeutet „Fjordblick“ und liegt direkt am Norefjord, einem großen See zwischen Nore und Rødberg. Der Ort Rødberg gehört zu der Gemeinde „Nore og Uvdal, die sich in der Provinz Buskerud befindet. Der Campingplatz ist ca. 6 KM südlich von Rødberg gelegen, in ca. 1,6 KM Entfernung von der Autobahn E40 von Kongsberg in Richtung Geilo. Der Campingplatz grenzt an den Hardagervidda Naturpark, ein wunderschönes Naturgebiet was sich ausgezeichnet  für wandern, langlaufen oder skifahren eignet. Dieses Gebiet ist Europas größtes Bergplateau. Mehr Auskünfte über dieses Gebiet finden Sie an einer anderen Stelle auf dieser Internetseite.</p>
+
+<p>Der Campingplatz bietet 75 Plätze für Wohnwagen, Wohnmobilen und Zelten. Ausser den großzügigen Plätzen, wo Elektrizität selbstverständlich zu Verfügung steht, bieten wir auch unsere hochwertig ausgestatteten Hütten (Hytter) oder Chalets an. Im weiteren Verlauf dieser Internetseite  erfahren Sie mehr darüber.</p>
+
+<p>Unser sehr modernes und luxuriöses Sanitärgebäude ist versehen von Duschen, Toiletten, Sauna und Solarium. Auf dem Campingplatz finden Sie einen Campingladen und für Kinder eine großzügige Spielwiese mit Trampoline, Schaukel usw.</p>
+
+<p>Sowie bereits erwähnt ist der Fjordgløtt Camping direct an dem Norefjord-See geliegen, wo Sie im Sommer baden und schwimmen können. Für Wassersportler vermieten wir Boote, Kanus und Wasserfahrräder und für Kinder stehen Schwimmwesten zu Verfügung. Der Norefjord-See bietet sowohl im Sommer als auch im Winter eine perfecte Möglichkeit zum Forelle-Angeln. </p>
+
+
+
+</p>
+
+</div>
+
+<br>
+
+<div style="text-align:center">
+  <h2></h2>
+  <p>Click on the images below:</p>
+</div>
+
+<!-- The four columns -->
+<div class="row">
+  <div class="column">
+    <img src="camp1.jpg"  style="width:100%" onclick="myFunction(this);">
+  </div>
+  
+  <div class="column">
+    <img src="camp2.jpg"  style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="camp3.jpg"  style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="camp4.jpg"  style="width:100%" onclick="myFunction(this);">
+  </div>
+</div>
+
+<div style="text-align:center">
+<div class="container">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <img id="expandedImg" style="width:800px">
+  <div id="imgtext"></div>
+</div>
+</div>
+
+<script>
+function myFunction(imgs) {
+    var expandImg = document.getElementById("expandedImg");
+    var imgText = document.getElementById("imgtext");
+    expandImg.src = imgs.src;
+    imgText.innerHTML = imgs.alt;
+    expandImg.parentElement.style.display = "block";
+}
+</script>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div id="nav-placeholder1">
+</div>
+
+<script>
+$(function(){
+  $("#nav-placeholder1").load("bottom.html");
+});
+</script>
+</body>
+
+</html>

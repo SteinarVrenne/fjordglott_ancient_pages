@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE></TITLE>
+<META NAME="GENERATOR" CONTENT="WEB! 2.0 Pro Extended Edition">
+<STYLE>
+#D3 {position:absolute;top:30px;left:30px;width:586px;height:255px;font-size:16px;color:#000000;font-family:Arial;z-index:-6;}
+#D3m {position:absolute;top:0;left:0;width:586px;height:255px;padding:10px;background:none;text-align:left;}
+#B0 {position:absolute;top:227px;left:137px;padding:10px;padding-bottom:0px;width:142px;z-index:1;height:27px;}
+#B0text {font-size:16px;color:#000000;text-decoration:none;font-weight:normal;font-style:normal;font-family:Arial;background-color:#eafdb0;width:142px;height:27px;}
+</STYLE>
+<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+function catchError()
+{
+	return true;
+}
+
+window.onerror = catchError;
+
+</SCRIPT>
+<SCRIPT SRC="web.js" TYPE="text/javascript"></SCRIPT>
+</HEAD>
+<BODY  STYLE="background:#eafdb0;"  onLoad="loader();">
+<DIV  ID="D3" ><LAYER NAME="D3m" WIDTH="586" BORDER="10"><DIV ID="D3m"><B PARENT=D3>Fjordglott Camping og Hyttesenter A.S.</B><BR><BR>Per 01-01-2007 har vi, Jaap og Sylvia Brokking, stoppet med &aring; drive campingplassen. Vi takker alle som har hjelpet oss og har v&aelig;rt p&aring; bes&oslash;k!<BR><BR>Per 01.01.2007 have we, Jaap and Sylvia Brokking, stopped with running the campsite. We thank everyone who has helped and has been visiting us!<BR><BR>Per 01.01.2007 zijn wij, Jaap en Sylvia Brokking, gestopt met het runnen van de camping. We bedanken iedereen die ons hebben geholpen en hebben bezocht! <BR><BR>e-mail / e-post:<BR> </DIV></LAYER></DIV>
+<DIV  ID="B0" TITLE="e-post / e-mail"><FORM onSubmit="return false"><INPUT TYPE=BUTTON ID="B0text" NAME="B0text" VALUE="info@fjordglott.net" onClick="location='mailto:info@fjordglott.net'" onMouseOver="this.style.textDecoration='none';this.style.fontWeight='normal';this.style.fontStyle='normal';this.style.fontFamily='Arial';this.style.fontSize='16px';this.style.color='#000000';this.style.backgroundColor='#808000';" onMouseOut="this.style.textDecoration='none';this.style.fontFamily='Arial';this.style.fontSize='16px';this.style.color='#000000';this.style.backgroundColor='#eafdb0';this.style.fontStyle='normal';this.style.fontWeight='normal';"></FORM></DIV>
+<!-- DO NOT CHANGE THE SCRIPTS BELOW, WEB! WILL MALFUNCTION IF YOU DO! -->
+<SCRIPT LANGUAGE="JavaScript" ID="WEB!" TYPE="text/javascript">
+var IE = (navigator.appName=="Microsoft Internet Explorer") && (navigator.platform && navigator.platform == 'Win32');
+
+function newSlide(id,next,wait)
+{
+	this.id = id;
+	this.next = next;
+	this.wait = wait;
+	this.elems = new Array();
+	return this;
+}
+
+function newElement(id,next,wait,type,lightRed,lightGreen,lightBlue,lightStrength,waveAnim,waveDir,waves,filter)
+{
+	this.id = id;
+	this.next = next;
+	this.wait = wait;
+	this.type = type;
+	this.filter = filter;								
+
+	if(navigator.appName != 'Netscape')
+	{
+		document.all(id).style.filter = filter;
+		var dur_s = filter.indexOf('Duration=')+9;
+		var dur_e = filter.indexOf(',',dur_s);
+		document.all(id).filters(0).Duration = filter.substring(dur_s,dur_e)*1.0;
+		
+		if(document.all(id).style.filter.toLowerCase().indexOf("light(")!=-1)
+		{
+			document.all(id).filters.light.addAmbient(lightRed,lightGreen,lightBlue,lightStrength);
+		}
+
+		if(waveAnim=="true")
+		{
+			document.all(id).wave = wave;
+			document.all(id).wavedir = waveDir;
+			document.all(id).filters.wave.phase = (waveDir=="up")?0:95;
+			waves[waves.length] = id;
+		}	
+	}
+	
+	return this;
+}
+
+function loader()
+{
+	startMarquees();
+	if(navigator.appName != 'Netscape')
+		startWaves();
+	else	
+		transitions_netscape();
+
+	start();
+}
+
+function wave()
+{
+	if(IE)
+	{
+		if(this.wavedir=="up" && this.filters.wave.phase<100)
+			this.filters.wave.phase = this.filters.wave.phase + 5 % 100;
+		else if(this.wavedir=="down" && this.filters.wave.phase>0)	
+			this.filters.wave.phase = this.filters.wave.phase - 5 % 100;
+		else if(this.wavedir=="up")
+			this.filters.wave.phase=0;
+		else if(this.wavedir=="down")
+			this.filters.wave.phase=95;
+
+		setTimeout(this.id + ".wave()",40);	
+	}
+}
+
+
+var wavesElements = new Array();
+var slides = new Array();
+var marquees = new Object();
+
+//start slide 0
+slides[0] = new newSlide("SL0","timer","0");
+slides[0].elems[0] = new newElement("D3", "timer", "0.0", "div", "255", "0", "0", "50", "false", "up", wavesElements, "revealtrans(Duration=0,Transition=0) ");
+slides[0].elems[1] = new newElement("B0", "timer", "0.0", "button", "255", "0", "0", "50", "false", "up", wavesElements, "revealtrans(Duration=0,Transition=0) ");
+//end slide 0
+
+function changeImage(img,loc)
+{if(IE)
+document.all(img+"image").src = loc;
+else
+
+document.layers[img].document.images[0].src = loc;
+}
+function startMarquees()
+{
+}
+</SCRIPT>
+</BODY>
+</HTML>

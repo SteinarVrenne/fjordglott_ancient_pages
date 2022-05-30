@@ -1,0 +1,124 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE></TITLE>
+<META NAME="GENERATOR" CONTENT="WEB! 2.0 Pro Extended Edition">
+<STYLE>
+#D0 {position:absolute;top:1px;left:3px;width:398px;height:776px;font-size:16px;color:#004000;font-family:arial;z-index:1;}
+#D0m {position:absolute;top:0;left:0;width:398px;height:776px;padding:10px;background:none;text-align:left;}
+#I1 {position:absolute;top:12px;left:390px;width:392px;height:249px;padding:10px;z-index:0;}
+#I3 {position:absolute;top:270px;left:392px;width:390px;height:283px;padding:10px;z-index:0;}
+</STYLE>
+<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+function catchError()
+{
+	return true;
+}
+
+window.onerror = catchError;
+
+</SCRIPT>
+<SCRIPT SRC="web.js" TYPE="text/javascript"></SCRIPT>
+</HEAD>
+<BODY  STYLE="background:#eafdb0;"  onLoad="loader();">
+<DIV  ID="D0" ><LAYER NAME="D0m" WIDTH="398" BORDER="10"><DIV ID="D0m"><U PARENT=D0>Fjordgl&oslash;tt Camping og Hytesenter in R&oslash;dberg, Norwegen</U><BR><BR>Fjordgl&oslash;tt bedeutet &#132;Fjordblick&#147; und liegt direkt am Norefjord, einem gro&szlig;en See zwischen Nore und R&oslash;dberg. Der Ort R&oslash;dberg geh&ouml;rt zu der Gemeinde &#132;Nore og Uvdal, die sich in der Provinz Buskerud befindet. Der Campingplatz ist ca. 6 KM s&uuml;dlich von R&oslash;dberg gelegen, in ca. 1,6 KM Entfernung von der Autobahn E40 von Kongsberg in Richtung Geilo. Der Campingplatz grenzt an den Hardagervidda Naturpark, ein wundersch&ouml;nes Naturgebiet was sich ausgezeichnet &nbsp;f&uuml;r wandern, langlaufen oder skifahren eignet. Dieses Gebiet ist Europas gr&ouml;&szlig;tes Bergplateau. Mehr Ausk&uuml;nfte &uuml;ber dieses Gebiet finden Sie an einer anderen Stelle auf dieser Internetseite.<BR><BR>Der Campingplatz bietet 75 Pl&auml;tze f&uuml;r Wohnwagen, Wohnmobilen und Zelten. Ausser den gro&szlig;z&uuml;gigen Pl&auml;tzen, wo Elektrizit&auml;t selbstverst&auml;ndlich zu Verf&uuml;gung steht, bieten wir auch unsere hochwertig ausgestatteten H&uuml;tten (Hytter) oder Chalets an. Im weiteren Verlauf dieser Internetseite &nbsp;erfahren Sie mehr dar&uuml;ber.<BR><BR>Unser sehr modernes und luxuri&ouml;ses Sanit&auml;rgeb&auml;ude ist versehen von Duschen, Toiletten, Sauna und Solarium. Auf dem Campingplatz finden Sie einen Campingladen und f&uuml;r Kinder eine gro&szlig;z&uuml;gige Spielwiese mit Trampoline, Schaukel usw.<BR><BR>Sowie bereits erw&auml;hnt ist der Fjordgl&oslash;tt Camping direct an dem Norefjord-See geliegen, wo Sie im Sommer baden und schwimmen k&ouml;nnen. F&uuml;r Wassersportler vermieten wir Boote, Kanus und Wasserfahrr&auml;der und f&uuml;r Kinder stehen Schwimmwesten zu Verf&uuml;gung. Der Norefjord-See bietet sowohl im Sommer als auch im Winter eine perfecte M&ouml;glichkeit zum Forelle-Angeln.<BR><U PARENT=D0><BR></U></DIV></LAYER></DIV>
+<DIV  ID="I1"><IMG SRC="foto's/Norefjorden.jpg" ID="I1image"  WIDTH="392"  HEIGHT="249"  ALT="Norefjord"></DIV>
+<DIV  ID="I3"><IMG SRC="foto's/lakeview.jpg" ID="I3image"  WIDTH="390"  HEIGHT="283"  ALT=""></DIV>
+<!-- DO NOT CHANGE THE SCRIPTS BELOW, WEB! WILL MALFUNCTION IF YOU DO! -->
+<SCRIPT LANGUAGE="JavaScript" ID="WEB!" TYPE="text/javascript">
+var IE = (navigator.appName=="Microsoft Internet Explorer") && (navigator.platform && navigator.platform == 'Win32');
+
+function newSlide(id,next,wait)
+{
+	this.id = id;
+	this.next = next;
+	this.wait = wait;
+	this.elems = new Array();
+	return this;
+}
+
+function newElement(id,next,wait,type,lightRed,lightGreen,lightBlue,lightStrength,waveAnim,waveDir,waves,filter)
+{
+	this.id = id;
+	this.next = next;
+	this.wait = wait;
+	this.type = type;
+	this.filter = filter;								
+
+	if(navigator.appName != 'Netscape')
+	{
+		document.all(id).style.filter = filter;
+		var dur_s = filter.indexOf('Duration=')+9;
+		var dur_e = filter.indexOf(',',dur_s);
+		document.all(id).filters(0).Duration = filter.substring(dur_s,dur_e)*1.0;
+		
+		if(document.all(id).style.filter.toLowerCase().indexOf("light(")!=-1)
+		{
+			document.all(id).filters.light.addAmbient(lightRed,lightGreen,lightBlue,lightStrength);
+		}
+
+		if(waveAnim=="true")
+		{
+			document.all(id).wave = wave;
+			document.all(id).wavedir = waveDir;
+			document.all(id).filters.wave.phase = (waveDir=="up")?0:95;
+			waves[waves.length] = id;
+		}	
+	}
+	
+	return this;
+}
+
+function loader()
+{
+	startMarquees();
+	if(navigator.appName != 'Netscape')
+		startWaves();
+	else	
+		transitions_netscape();
+
+	start();
+}
+
+function wave()
+{
+	if(IE)
+	{
+		if(this.wavedir=="up" && this.filters.wave.phase<100)
+			this.filters.wave.phase = this.filters.wave.phase + 5 % 100;
+		else if(this.wavedir=="down" && this.filters.wave.phase>0)	
+			this.filters.wave.phase = this.filters.wave.phase - 5 % 100;
+		else if(this.wavedir=="up")
+			this.filters.wave.phase=0;
+		else if(this.wavedir=="down")
+			this.filters.wave.phase=95;
+
+		setTimeout(this.id + ".wave()",40);	
+	}
+}
+
+
+var wavesElements = new Array();
+var slides = new Array();
+var marquees = new Object();
+
+//start slide 0
+slides[0] = new newSlide("SL0","timer","0");
+slides[0].elems[0] = new newElement("D0", "timer", "0.0", "div", "255", "0", "0", "50", "false", "up", wavesElements, "revealtrans(Duration=0,Transition=0) ");
+slides[0].elems[1] = new newElement("I1", "timer", "0.0", "image", "255", "0", "0", "50", "false", "up", wavesElements, "revealtrans(Duration=0,Transition=0) ");
+slides[0].elems[2] = new newElement("I3", "timer", "0.0", "image", "255", "0", "0", "50", "false", "up", wavesElements, "revealtrans(Duration=0,Transition=0) ");
+//end slide 0
+
+function changeImage(img,loc)
+{if(IE)
+document.all(img+"image").src = loc;
+else
+
+document.layers[img].document.images[0].src = loc;
+}
+function startMarquees()
+{
+}
+</SCRIPT>
+</BODY>
+</HTML>

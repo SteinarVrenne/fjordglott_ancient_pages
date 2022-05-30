@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<HTML>
+<HEAD>
+<TITLE></TITLE>
+<META NAME="Generator" CONTENT="WEB! 2.0 Pro Extended Edition">
+<META NAME="Author" CONTENT="Jaap Brokking">
+<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+function updateFrames()
+{
+	for(var x=0;x<arguments.length;x+=2)
+	{
+		var frm = window.frames[arguments[x]];
+		if(frm!=null)
+			frm.location = arguments[x+1];
+	}
+}
+</SCRIPT>
+</HEAD>
+<FRAMESET ROWS="10%, 44%, 21%" BORDER="0">
+	<FRAME SRC="1_koptekst.html" NAME="Frame3">
+	<FRAMESET COLS="16%, 84%">
+		<FRAME SRC="3_Noors_navigatie.html" NAME="Frame5">
+		<FRAME SRC="2_middenstuk.html" NAME="Frame1">
+	</FRAMESET>
+	<FRAME SRC="1_voettekst.html" NAME="Frame4">
+</FRAMESET>
+</HTML>

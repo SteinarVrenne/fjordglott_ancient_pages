@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+
+    <meta http-equiv="content-type" content="text/html; charset=windows-1252">
+    <title></title>
+    <meta name="GENERATOR" content="WEB! 2.0 Pro Extended Edition">
+    <style>
+#D0 {position:absolute;top:1px;left:1px;width:369px;height:668px;font-size:16px;color:#004000;font-family:arial;z-index:1;}
+#D0m {position:absolute;top:0;left:0;width:369px;height:668px;padding:10px;background:none;text-align:left;}
+#I10 {position:absolute;top:1px;left:378px;width:250px;height:180px;padding:10px;z-index:1;}
+</style>
+    <script language="JavaScript" type="text/javascript">
+function catchError()
+{
+	return true;
+}
+
+window.onerror = catchError;
+
+</script>
+    <script src="web.js" type="text/javascript"></script>
+  </head>
+  <body style="background:#eafdb0;" onload="loader();">
+    <div id="D0"><layer name="D0m" width="369" border="10">
+        <div id="D0m"><u parent="D0">Les chalets.<br>
+            <br>
+          </u>Le camping dispose de 6 chalets (bungalows ou " hytter ").<u
+            parent="D0"><br>
+          </u>1x : chalet 6-10 personnes<br>
+          2x : chalet 3-6 personnes<br>
+          3x : chalet 2 personnes<br>
+          <br>
+          A l'exception des chalets pour 2 personnes, tous les chalets
+          sont très luxueux et parfaits pour un long séjour. Ils sont
+          équipés d'une douche, toilette, chauffage par le sol, cuisine,
+          coin salon, coin-repas, télévision, etc.<br>
+          <br>
+          Les chalets pour 3-6 personnes ont une chambre à coucher pour
+          3 personnes et un canapé-lit dans la salle de séjour. Le
+          chalet pour 6-10 personnes a deux chambres à coucher pour 3
+          personnes et un grenier où 4 personnes peuvent dormir.<br>
+          <br>
+          Les cuisines sont pourvues d'un réfrigérateur, plaque de
+          cuisson, four, hotte aspirante, cafetière électrique et
+          service. De votre propre terrasse, vous pouvez jouir de la vue
+          magnifique sur le lac Norefjord.<br>
+          <br>
+          Les chalets pour 2 personnes sont simplement équipés de lits
+          superposés, un coin salon simple, une plaque de cuisson et un
+          réfrigérateur.<br>
+          <br>
+          Vous devez apporter votre propre literie, comme des draps et
+          des drap-housses. Vous pouvez éventuellement louer un paquet
+          de linge chez nous.<br>
+          <br>
+          Il y a assez d'espace à côté de tous les chalets pour garer
+          une ou plusieurs voiture(s).<u parent="D0"><br>
+          </u></div>
+      </layer></div>
+    <div id="I10"><img src="foto%27s/4-6_pers_hut_met_uitzicht.JPG"
+        id="I10image" alt="3-6 pers hut" height="180" width="250"></div>
+    <!-- DO NOT CHANGE THE SCRIPTS BELOW, WEB! WILL MALFUNCTION IF YOU DO! -->
+    <script language="JavaScript" id="WEB!" type="text/javascript">
+var IE = (navigator.appName=="Microsoft Internet Explorer") && (navigator.platform && navigator.platform == 'Win32');
+
+function newSlide(id,next,wait)
+{
+	this.id = id;
+	this.next = next;
+	this.wait = wait;
+	this.elems = new Array();
+	return this;
+}
+
+function newElement(id,next,wait,type,lightRed,lightGreen,lightBlue,lightStrength,waveAnim,waveDir,waves,filter)
+{
+	this.id = id;
+	this.next = next;
+	this.wait = wait;
+	this.type = type;
+	this.filter = filter;								
+
+	if(navigator.appName != 'Netscape')
+	{
+		document.all(id).style.filter = filter;
+		var dur_s = filter.indexOf('Duration=')+9;
+		var dur_e = filter.indexOf(',',dur_s);
+		document.all(id).filters(0).Duration = filter.substring(dur_s,dur_e)*1.0;
+		
+		if(document.all(id).style.filter.toLowerCase().indexOf("light(")!=-1)
+		{
+			document.all(id).filters.light.addAmbient(lightRed,lightGreen,lightBlue,lightStrength);
+		}
+
+		if(waveAnim=="true")
+		{
+			document.all(id).wave = wave;
+			document.all(id).wavedir = waveDir;
+			document.all(id).filters.wave.phase = (waveDir=="up")?0:95;
+			waves[waves.length] = id;
+		}	
+	}
+	
+	return this;
+}
+
+function loader()
+{
+	startMarquees();
+	if(navigator.appName != 'Netscape')
+		startWaves();
+	else	
+		transitions_netscape();
+
+	start();
+}
+
+function wave()
+{
+	if(IE)
+	{
+		if(this.wavedir=="up" && this.filters.wave.phase<100)
+			this.filters.wave.phase = this.filters.wave.phase + 5 % 100;
+		else if(this.wavedir=="down" && this.filters.wave.phase>0)	
+			this.filters.wave.phase = this.filters.wave.phase - 5 % 100;
+		else if(this.wavedir=="up")
+			this.filters.wave.phase=0;
+		else if(this.wavedir=="down")
+			this.filters.wave.phase=95;
+
+		setTimeout(this.id + ".wave()",40);	
+	}
+}
+
+
+var wavesElements = new Array();
+var slides = new Array();
+var marquees = new Object();
+
+//start slide 0
+slides[0] = new newSlide("SL0","timer","0");
+slides[0].elems[0] = new newElement("D0", "timer", "0.0", "div", "255", "0", "0", "50", "false", "up", wavesElements, "revealtrans(Duration=0,Transition=0) ");
+slides[0].elems[1] = new newElement("I10", "timer", "0.0", "image", "255", "0", "0", "50", "false", "up", wavesElements, "revealtrans(Duration=0,Transition=0) ");
+//end slide 0
+
+function changeImage(img,loc)
+{if(IE)
+document.all(img+"image").src = loc;
+else
+
+document.layers[img].document.images[0].src = loc;
+}
+function startMarquees()
+{
+}
+</script>
+  </body>
+</html>

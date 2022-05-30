@@ -1,0 +1,227 @@
+<html>
+
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="fjordglott.css">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<style>
+.responsive {
+    width: 100%;
+
+}
+
+
+.img1 {
+
+border-radius: 60%;
+display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+
+ /* Style all font awesome icons */
+.fa-facebook {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+  position: fixed;
+  top: 25%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.tempText {
+  font-size:20px;
+}
+
+
+
+</style>
+
+</head>
+
+<body>
+
+<!-- DENNE KODEN HENTER DET SOM BEFINNER SEG I HEAD.HTML-FILEN (SOM ER HEADER OG NAVIGASJONSBAREN FOR HELE SIDEN. DENNE FINNES I HVER ENKELT SIDE -->
+<div id="nav-placeholder">
+</div>
+
+<script>
+$(function(){
+  $("#nav-placeholder").load("head.html");
+});
+</script>
+<br>
+<a href="https://www.facebook.com/Fjordgløtt-Camping-231305523551871/?ref=py_c" class="fa fa-facebook"></a>
+<div class= textcenter>
+
+<h2>Velkommen til Fjordgløtt Camping!</h2>
+
+<img src="bilde1.jpg" class="img1" height="300" width="400" align="middle">
+
+<br>
+Fjordgløtt Camping ligger i Nore og Uvdal kommune øverst i Numedal, midt i hjertet av Sør-Norge.
+<br>
+Campingplassen ligger 6 km sør fra Rødberg ved F40 mellom Kongsberg og Geilo.
+</div>
+<br>
+
+
+<div class="textcenter">
+<div class="textinfo">
+
+På campingplassen har vi plass til 75 bobiler, campingvogner og telt.
+
+For barna har vi en lekeplass med trampoline, husker og andre lekeapparater.
+
+<br>
+<br>
+
+Fjordgløtt Camping ligger fint til ved Norefjorden, med gode fiskemuligheter både sommer og vinter (ørret og røyefiske). Mulighet for leie av båt. Fjordgløtt Camping grenser til Hardangervidda Nasjonalpark og mulighetene for turer til fots eller på ski er mange. Det er flere skisentre i nærheten: Uvdal, Dagali, Geilo og Vegglifjell.
+
+<br>
+<br>
+<br>
+
+For mer informasjon, send mail til <a href="mailto:post@fjordglott.net" target="_top">post@fjordglott.net</a>
+
+<br>
+<br>
+<br>
+
+<b class="tempText">
+  På grunn av brann i sanitærbygget på campingplassen har vi midlertidige sanitærfasiliteter sommeren 2021.
+  <br>
+  Vi holder likevel åpent fra 1. mai, og ønsker både gamle og nye gjester velkommen også denne sesongen!
+</b>
+
+
+<br>
+<br>
+<!-- BILDER MED TEKST, DET I SORT TEKST KAN REDIGERES. ENDRING AV BILDER GJØRES VED Å LEGGE TIL FILNAVNET VED <IMG SRC="">  -->
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="hytteview.jpg" class="responsive" width="600" height="400">
+   <div class="text"><b>Hytter og Camping</b>
+   <br>Hos Fjorgløtt tilbyr vi både hytter og campingplasser</div>
+</div>
+
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="natur.jpg" class="responsive" width="600" height="400">
+  <div class="text"><b>Flott natur</b>
+  <br>Her på Fjordgløtt er vi tett på naturen med både sjø og skog rett utenfor døren</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="hytteview1.jpg" class="responsive" width="600" height="400">
+  <div class="text"><b>Aktiviteter</b>
+  <br>Det finnes en rekke aktiviteter i området, som både fisking, rafting og dresinsykling</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 4</div>
+  <img src="camp2.jpg" class="responsive" width="600" height="400">
+  <div class="text"><b>Campingen</b>
+  <br></div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+ <span class="dot" onclick="currentSlide(4)"></span>
+</div>
+
+
+<!-- IKKE REDIGER HER, DETTE ER HVA SOM GJØR AT DET BYTTES BILDER AUTOMATISK OG HVOR LENGE HVERT BILDE SKAL SYNES -->
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 10000); // Change image every 2 seconds
+}
+</script>
+
+<br>
+<br>
+
+</div>
+</div>
+
+<br><br><br><br>
+<div id="nav-placeholder1">
+</div>
+
+<script>
+$(function(){
+  $("#nav-placeholder1").load("bottom.html");
+});
+</script>
+
+</body>
+
+</html>

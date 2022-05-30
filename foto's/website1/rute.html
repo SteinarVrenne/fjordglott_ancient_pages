@@ -1,0 +1,128 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE></TITLE>
+<META NAME="GENERATOR" CONTENT="WEB! 2.0 Pro Extended Edition">
+<STYLE>
+#I1 {position:absolute;top:16px;left:2px;width:699px;height:451px;padding:10px;z-index:0;}
+#I2 {position:absolute;top:202px;left:23px;width:493px;height:396px;padding:10px;z-index:0;}
+#B0 {position:absolute;top:201px;left:465px;padding:10px;padding-bottom:0px;width:79px;z-index:1;height:px;}
+#B0text {font-size:16px;color:#000000;text-decoration:none;font-weight:normal;font-style:normal;font-family:arial;background-color:#c0c0c0;width:79px;height:px;}
+#B1 {position:absolute;top:100px;left:326px;padding:10px;padding-bottom:0px;width:55px;z-index:1;height:20px;}
+#B1text {font-size:11px;color:#ff0000;text-decoration:none;font-weight:normal;font-style:normal;font-family:arial;background-color:#ffff00;width:55px;height:20px;}
+</STYLE>
+<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+function catchError()
+{
+	return true;
+}
+
+window.onerror = catchError;
+
+</SCRIPT>
+<SCRIPT SRC="web.js" TYPE="text/javascript"></SCRIPT>
+</HEAD>
+<BODY  STYLE="background:#eafdb0;"  onLoad="loader();">
+<DIV  ID="I1"><IMG SRC="foto's/rute_1.gif" ID="I1image"  WIDTH="699"  HEIGHT="451"  ALT=""></DIV>
+<DIV  ID="I2"><IMG SRC="foto's/rute_2..JPG" ID="I2image"  WIDTH="493"  HEIGHT="396"  ALT=""></DIV>
+<DIV STYLE="visibility:hidden"  ID="B0" TITLE="Zoom in"><FORM onSubmit="return false"><INPUT TYPE=BUTTON ID="B0text" NAME="B0text" VALUE="Ga naar" onClick="location='rute.html'" onMouseOver="this.style.textDecoration='none';this.style.fontWeight='normal';this.style.fontStyle='normal';this.style.fontFamily='Arial';this.style.fontSize='16px';this.style.color='#ff0000';this.style.backgroundColor='#ffff00';" onMouseOut="this.style.textDecoration='none';this.style.fontFamily='arial';this.style.fontSize='16px';this.style.color='#000000';this.style.backgroundColor='#c0c0c0';this.style.fontStyle='normal';this.style.fontWeight='normal';"></FORM></DIV>
+<DIV  ID="B1" TITLE="ZOOM IN"><FORM onSubmit="return false"><INPUT TYPE=BUTTON ID="B1text" NAME="B1text" VALUE="R&oslash;dberg" onClick="location='rute.html'" onMouseOver="this.style.textDecoration='none';this.style.fontWeight='normal';this.style.fontStyle='normal';this.style.fontFamily='Arial';this.style.fontSize='11px';this.style.color='#ffff00';this.style.backgroundColor='#ff0000';" onMouseOut="this.style.textDecoration='none';this.style.fontFamily='arial';this.style.fontSize='11px';this.style.color='#ff0000';this.style.backgroundColor='#ffff00';this.style.fontStyle='normal';this.style.fontWeight='normal';"></FORM></DIV>
+<!-- DO NOT CHANGE THE SCRIPTS BELOW, WEB! WILL MALFUNCTION IF YOU DO! -->
+<SCRIPT LANGUAGE="JavaScript" ID="WEB!" TYPE="text/javascript">
+var IE = (navigator.appName=="Microsoft Internet Explorer") && (navigator.platform && navigator.platform == 'Win32');
+
+function newSlide(id,next,wait)
+{
+	this.id = id;
+	this.next = next;
+	this.wait = wait;
+	this.elems = new Array();
+	return this;
+}
+
+function newElement(id,next,wait,type,lightRed,lightGreen,lightBlue,lightStrength,waveAnim,waveDir,waves,filter)
+{
+	this.id = id;
+	this.next = next;
+	this.wait = wait;
+	this.type = type;
+	this.filter = filter;								
+
+	if(navigator.appName != 'Netscape')
+	{
+		document.all(id).style.filter = filter;
+		var dur_s = filter.indexOf('Duration=')+9;
+		var dur_e = filter.indexOf(',',dur_s);
+		document.all(id).filters(0).Duration = filter.substring(dur_s,dur_e)*1.0;
+		
+		if(document.all(id).style.filter.toLowerCase().indexOf("light(")!=-1)
+		{
+			document.all(id).filters.light.addAmbient(lightRed,lightGreen,lightBlue,lightStrength);
+		}
+
+		if(waveAnim=="true")
+		{
+			document.all(id).wave = wave;
+			document.all(id).wavedir = waveDir;
+			document.all(id).filters.wave.phase = (waveDir=="up")?0:95;
+			waves[waves.length] = id;
+		}	
+	}
+	
+	return this;
+}
+
+function loader()
+{
+	startMarquees();
+	if(navigator.appName != 'Netscape')
+		startWaves();
+	else	
+		transitions_netscape();
+
+	start();
+}
+
+function wave()
+{
+	if(IE)
+	{
+		if(this.wavedir=="up" && this.filters.wave.phase<100)
+			this.filters.wave.phase = this.filters.wave.phase + 5 % 100;
+		else if(this.wavedir=="down" && this.filters.wave.phase>0)	
+			this.filters.wave.phase = this.filters.wave.phase - 5 % 100;
+		else if(this.wavedir=="up")
+			this.filters.wave.phase=0;
+		else if(this.wavedir=="down")
+			this.filters.wave.phase=95;
+
+		setTimeout(this.id + ".wave()",40);	
+	}
+}
+
+
+var wavesElements = new Array();
+var slides = new Array();
+var marquees = new Object();
+
+//start slide 0
+slides[0] = new newSlide("SL0","timer","0");
+slides[0].elems[0] = new newElement("B0", "timer", "0.1", "button", "255", "0", "0", "50", "false", "up", wavesElements, "revealtrans(Duration=1.0,Transition=0)  alpha(opacity=0,enabled=1)");
+slides[0].elems[1] = new newElement("I1", "timer", "0.0", "image", "255", "0", "0", "50", "false", "up", wavesElements, "revealtrans(Duration=0,Transition=0) ");
+slides[0].elems[2] = new newElement("B1", "timer", "0.0", "button", "255", "0", "0", "50", "false", "up", wavesElements, "revealtrans(Duration=0,Transition=0) ");
+slides[0].elems[3] = new newElement("I2", "timer", "0.0", "image", "255", "0", "0", "50", "false", "up", wavesElements, "revealtrans(Duration=0,Transition=0) ");
+//end slide 0
+
+function changeImage(img,loc)
+{if(IE)
+document.all(img+"image").src = loc;
+else
+
+document.layers[img].document.images[0].src = loc;
+}
+function startMarquees()
+{
+}
+</SCRIPT>
+</BODY>
+</HTML>

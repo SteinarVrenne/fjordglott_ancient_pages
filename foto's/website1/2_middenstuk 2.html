@@ -1,0 +1,145 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE></TITLE>
+<META NAME="GENERATOR" CONTENT="WEB! 2.0 Pro Extended Edition">
+<STYLE>
+#D0 {position:absolute;top:363px;left:39px;width:430px;height:38px;font-size:16px;color:#000000;font-family:arial;z-index:4;}
+#D0m {position:absolute;top:0;left:0;width:430px;height:38px;padding:10px;background:none;text-align:left;}
+#I11 {position:absolute;top:135px;left:608px;width:50px;height:50px;padding:10px;z-index:0;}
+#I12 {position:absolute;top:209px;left:607px;width:50px;height:42px;padding:10px;z-index:0;}
+#I13 {position:absolute;top:11px;left:611px;width:50px;height:57px;padding:10px;z-index:0;}
+#I7 {position:absolute;top:86px;left:602px;width:67px;height:40px;padding:10px;z-index:0;}
+#I9 {position:absolute;top:5px;left:105px;width:470px;height:314px;padding:10px;z-index:-1;}
+#I5 {position:absolute;top:15px;left:4px;width:50px;height:36px;padding:10px;z-index:1;cursor:hand;}
+#I6 {position:absolute;top:61px;left:4px;width:50px;height:36px;padding:10px;z-index:2;cursor:hand;}
+#I8 {position:absolute;top:108px;left:4px;width:50px;height:36px;padding:10px;z-index:3;cursor:hand;}
+#I10 {position:absolute;top:156px;left:5px;width:50px;height:36px;padding:10px;z-index:4;cursor:hand;}
+</STYLE>
+<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+function catchError()
+{
+	return true;
+}
+
+window.onerror = catchError;
+
+</SCRIPT>
+<SCRIPT SRC="web.js" TYPE="text/javascript"></SCRIPT>
+</HEAD>
+<BODY  STYLE="background:#eafdb0;"  onLoad="loader();">
+<DIV  ID="D0" ><LAYER NAME="D0m" WIDTH="430" BORDER="10"><DIV ID="D0m">VELKOMMEN TIL FJORDGL</DIV></LAYER></DIV>
+<DIV  ID="I11"><IMG SRC="foto's/ADAC.jpg" ID="I11image"  WIDTH="50"  HEIGHT="50"  ALT=""></DIV>
+<DIV  ID="I12"><IMG SRC="foto's/ACSI.jpg" ID="I12image"  WIDTH="50"  HEIGHT="42"  ALT=""></DIV>
+<DIV  ID="I13"><IMG SRC="foto's/NAF_logo.gif" ID="I13image"  WIDTH="50"  HEIGHT="57"  ALT=""></DIV>
+<DIV  ID="I7"><IMG SRC="foto's/anwb_logo.jpg" ID="I7image"  WIDTH="67"  HEIGHT="40"  ALT=""></DIV>
+<DIV  ID="I9"><IMG SRC="foto's/campin_lucht.JPG" ID="I9image"  WIDTH="470"  HEIGHT="314"  ALT=""></DIV>
+<DIV  ID="I5"><A HREF="3_Noors_frameset.html" TARGET="_top" ><IMG SRC="foto's/noorse_vlag.jpg" ID="I5image"  WIDTH="50"  HEIGHT="36"  ALT="Norsk" BORDER=0></A></DIV>
+<DIV  ID="I6"><A HREF="2_NL_frameset_2.html" TARGET="_top" ><IMG SRC="foto's/nl_vlag.jpg" ID="I6image"  WIDTH="50"  HEIGHT="36"  ALT="Nederlands" BORDER=0></A></DIV>
+<DIV  ID="I8"><A HREF="4_UK_frameset.html" TARGET="_top" ><IMG SRC="foto's/engelse_vlag.jpg" ID="I8image"  WIDTH="50"  HEIGHT="36"  ALT="English" BORDER=0></A></DIV>
+<DIV  ID="I10"><A HREF="5_DE_frameset.html" TARGET="_top" ><IMG SRC="foto's/duitse_vlag.jpg" ID="I10image"  WIDTH="50"  HEIGHT="36"  ALT="Deutsch" BORDER=0></A></DIV>
+<!-- DO NOT CHANGE THE SCRIPTS BELOW, WEB! WILL MALFUNCTION IF YOU DO! -->
+<SCRIPT LANGUAGE="JavaScript" ID="WEB!" TYPE="text/javascript">
+var IE = (navigator.appName=="Microsoft Internet Explorer") && (navigator.platform && navigator.platform == 'Win32');
+
+function newSlide(id,next,wait)
+{
+	this.id = id;
+	this.next = next;
+	this.wait = wait;
+	this.elems = new Array();
+	return this;
+}
+
+function newElement(id,next,wait,type,lightRed,lightGreen,lightBlue,lightStrength,waveAnim,waveDir,waves,filter)
+{
+	this.id = id;
+	this.next = next;
+	this.wait = wait;
+	this.type = type;
+	this.filter = filter;								
+
+	if(navigator.appName != 'Netscape')
+	{
+		document.all(id).style.filter = filter;
+		var dur_s = filter.indexOf('Duration=')+9;
+		var dur_e = filter.indexOf(',',dur_s);
+		document.all(id).filters(0).Duration = filter.substring(dur_s,dur_e)*1.0;
+		
+		if(document.all(id).style.filter.toLowerCase().indexOf("light(")!=-1)
+		{
+			document.all(id).filters.light.addAmbient(lightRed,lightGreen,lightBlue,lightStrength);
+		}
+
+		if(waveAnim=="true")
+		{
+			document.all(id).wave = wave;
+			document.all(id).wavedir = waveDir;
+			document.all(id).filters.wave.phase = (waveDir=="up")?0:95;
+			waves[waves.length] = id;
+		}	
+	}
+	
+	return this;
+}
+
+function loader()
+{
+	startMarquees();
+	if(navigator.appName != 'Netscape')
+		startWaves();
+	else	
+		transitions_netscape();
+
+	start();
+}
+
+function wave()
+{
+	if(IE)
+	{
+		if(this.wavedir=="up" && this.filters.wave.phase<100)
+			this.filters.wave.phase = this.filters.wave.phase + 5 % 100;
+		else if(this.wavedir=="down" && this.filters.wave.phase>0)	
+			this.filters.wave.phase = this.filters.wave.phase - 5 % 100;
+		else if(this.wavedir=="up")
+			this.filters.wave.phase=0;
+		else if(this.wavedir=="down")
+			this.filters.wave.phase=95;
+
+		setTimeout(this.id + ".wave()",40);	
+	}
+}
+
+
+var wavesElements = new Array();
+var slides = new Array();
+var marquees = new Object();
+
+//start slide 0
+slides[0] = new newSlide("SL0","timer","0");
+slides[0].elems[0] = new newElement("I11", "timer", "0.0", "image", "255", "0", "0", "50", "false", "up", wavesElements, "revealtrans(Duration=0,Transition=0) ");
+slides[0].elems[1] = new newElement("I12", "timer", "0.0", "image", "255", "0", "0", "50", "false", "up", wavesElements, "revealtrans(Duration=0,Transition=0) ");
+slides[0].elems[2] = new newElement("I13", "timer", "0.0", "image", "255", "0", "0", "50", "false", "up", wavesElements, "revealtrans(Duration=0,Transition=0) ");
+slides[0].elems[3] = new newElement("I7", "timer", "0.0", "image", "255", "0", "0", "50", "false", "up", wavesElements, "revealtrans(Duration=0,Transition=0) ");
+slides[0].elems[4] = new newElement("I9", "timer", "0.0", "image", "255", "0", "0", "50", "false", "up", wavesElements, "revealtrans(Duration=0,Transition=0) ");
+slides[0].elems[5] = new newElement("I5", "timer", "0.0", "image", "255", "0", "0", "50", "false", "up", wavesElements, "revealtrans(Duration=0,Transition=0) ");
+slides[0].elems[6] = new newElement("I6", "timer", "0.0", "image", "255", "0", "0", "50", "false", "up", wavesElements, "revealtrans(Duration=0,Transition=0) ");
+slides[0].elems[7] = new newElement("I8", "timer", "0.0", "image", "255", "0", "0", "50", "false", "up", wavesElements, "revealtrans(Duration=0,Transition=0) ");
+slides[0].elems[8] = new newElement("I10", "timer", "0.0", "image", "255", "0", "0", "50", "false", "up", wavesElements, "revealtrans(Duration=0,Transition=0) ");
+slides[0].elems[9] = new newElement("D0", "timer", "0.0", "div", "255", "0", "0", "50", "false", "up", wavesElements, "revealtrans(Duration=0,Transition=0) ");
+//end slide 0
+
+function changeImage(img,loc)
+{if(IE)
+document.all(img+"image").src = loc;
+else
+
+document.layers[img].document.images[0].src = loc;
+}
+function startMarquees()
+{
+}
+</SCRIPT>
+</BODY>
+</HTML>

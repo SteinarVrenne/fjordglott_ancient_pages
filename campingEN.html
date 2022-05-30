@@ -1,0 +1,125 @@
+﻿<html>
+
+<head>
+<meta charset="UTF-8"> 
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<link rel="stylesheet" type="text/css" href="camping.css">
+
+<style>
+
+
+.img {
+
+border-radius: 60%;
+display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+ 
+ 
+.textcenter{
+padding: 2em;
+
+}
+
+h2 {
+text-align: center;
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div id="nav-placeholder">
+</div>
+<script>
+$(function(){
+  $("#nav-placeholder").load("headEN.html");
+});
+</script>
+
+<br>
+<br>
+
+<h2>Fjordgløtt Campsite in Rødberg, Norway</h2>
+<img src="natur.jpg" class="img" height="200" width="300" align="middle">
+<div class="textcenter">
+
+<p>Fjordgløtt means 'fjord view' and is situated directly at the Norefjord, a large lake between Nore and Rødberg. </p>
+
+<p>The campsite is located 3,73 miles south of Rødberg, part of the council of 'Nore og Uvdal' and only 1600 metres from the F40, the motorway from Kongsberg to Geilo. </p>
+
+<p>The campsite borders on the 'Hardangervidda Nature park', a beautiful area where you can walk, ski (cross country).
+This is the largest mountain plateau in Europe.
+More information on these mountains can be found elsewhere on this website. </p>
+
+<p>The campsite has availability for 75 caravans, campers and tents and there is electricity on all pitches. </p>
+
+<p>As previously mentioned, the Fjordgløtt campsite is situated directly at a large lake: Norefjord. Besides swimming this is the perfect place to go fishing on e.g. trout.
+ In Winter you may even go ice fishing! On the campsite you can rent boats. For the children's safety we rent life jackets.</p>
+
+<br><br><br>
+
+</div>
+
+<br>
+
+<div style="text-align:center">
+  <h2>Pictures of the campsite</h2>
+  <p>Click on the images below:</p>
+</div>
+
+<!-- The four columns -->
+<div class="row">
+  <div class="column">
+    <img src="camp1.jpg"  style="width:100%" onclick="myFunction(this);">
+  </div>
+  
+  <div class="column">
+    <img src="camp2.jpg"  style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="camp3.jpg"  style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="camp4.jpg"  style="width:100%" onclick="myFunction(this);">
+  </div>
+</div>
+
+<div style="text-align:center">
+<div class="container">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <img id="expandedImg" style="width:800px">
+  <div id="imgtext"></div>
+</div>
+</div>
+
+
+<script>
+function myFunction(imgs) {
+    var expandImg = document.getElementById("expandedImg");
+    var imgText = document.getElementById("imgtext");
+    expandImg.src = imgs.src;
+    imgText.innerHTML = imgs.alt;
+    expandImg.parentElement.style.display = "block";
+}
+</script>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div id="nav-placeholder1">
+</div>
+
+<script>
+$(function(){
+  $("#nav-placeholder1").load("bottom.html");
+});
+</script>
+</body>
+
+</html>

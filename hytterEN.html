@@ -1,0 +1,127 @@
+<html>
+
+<head>
+<meta charset="UTF-8"> 
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<link rel="stylesheet" type="text/css" href="hytter.css">
+
+<style>
+
+
+.img {
+
+border-radius: 60%;
+display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+ 
+ 
+
+
+h2 {
+text-align: center;
+}
+
+
+
+</style>
+</head>
+
+
+<body>
+
+<div id="nav-placeholder">
+</div>
+<script>
+$(function(){
+  $("#nav-placeholder").load("headEN.html");
+});
+</script>
+
+<br>
+<br>
+
+<h2>The Cabins</h2>
+<img src="hytteview.jpg" class="img" height="200" width="300" align="middle"> 
+<br>
+
+In total there are 6 cabins on our campsite:
+<br><br>
+1x cabin:   6-10 persons
+<br>
+<br>
+3x cabin:  3-6 persons
+<br>
+<br>
+2x cabin:  2-3 persons
+
+<p>With the exception of the 2 persons cabins, all cabins are luxuriously equipped and perfectly suitable for a prolonged stay. All these cabins have a shower, toilet, kitchen, television, sitting area with a separate dining table and under floor heating. </p>
+
+<p>The 2- persons cabins are simply furnished with a bunk bed, sitting area, hot plate and a refrigerator. <br>The 3-6 persons cabins have 1 bedroom for 3 persons as well as a sofa bed in the living room. <br>The 6-10 persons cabin has 2 bedrooms for 3 persons and an attic which suits 4 persons. </p>
+
+<p>The kitchens are equipped with a refrigerator, hot plate, oven, cooker hood, automatic coffee maker and crockery.<br> Furthermore the cabins are almost directly located at the fjord. From your own terrace you can enjoy the wonderful view of the Norefjord. </p>
+
+
+
+<p>You need to bring your own sheets, sleeping bags or duvets. Though you can also rent linen on the campsite.</p>
+
+<p>Near all the cabins there is plenty of space to park one or more cars. </p>
+
+
+<div style="text-align:center">
+  <h2></h2>
+  <p>Click on the images below:</p>
+</div>
+
+<!-- The four columns -->
+<div class="row">
+  <div class="column">
+    <img src="hyttest.jpg"  style="width:100%" onclick="myFunction(this);">
+  </div>
+  
+  <div class="column">
+    <img src="sovhytte.jpg"  style="width:70%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="hyttespis.jpg"  style="width:70%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="hyttekj.jpg"  style="width:90%" onclick="myFunction(this);">
+  </div>
+</div>
+
+<div style="text-align:center">
+<div class="container">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <img id="expandedImg" style="width:500px">
+  <div id="imgtext"></div>
+</div>
+</div>
+
+<script>
+function myFunction(imgs) {
+    var expandImg = document.getElementById("expandedImg");
+    var imgText = document.getElementById("imgtext");
+    expandImg.src = imgs.src;
+    imgText.innerHTML = imgs.alt;
+    expandImg.parentElement.style.display = "block";
+}
+</script>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div id="nav-placeholder1">
+</div>
+
+<script>
+$(function(){
+  $("#nav-placeholder1").load("bottom.html");
+});
+</script>
+</body>
+
+</html>

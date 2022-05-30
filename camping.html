@@ -1,0 +1,124 @@
+﻿<html>
+
+<head>
+<meta charset="UTF-8">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<link rel="stylesheet" type="text/css" href="camping.css">
+
+<style>
+
+
+
+.img {
+
+border-radius: 60%;
+display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+
+.textcenter{
+padding: 2em;
+
+}
+
+h2 {
+text-align: center;
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div id="nav-placeholder">
+</div>
+<script>
+$(function(){
+  $("#nav-placeholder").load("head.html");
+});
+</script>
+
+<br>
+<br>
+
+<h2>Camping</h2>
+<img src="natur.jpg" class="img" height="200" width="300" align="middle">
+<div class="textcenter">
+
+<p>Fjordgløtt Camping ligger i Nore og Uvdal kommune øverst i Numedal, og midt i hjertet av Sør-Norge. Campingplassen ligger 6 kilometer sør for Rødberg. </p>
+
+<p>På campingplassen er det plass til 75 bobiler, campingvogner og flott teltplasser, med eller uten strøm.</p>
+
+<p>For barna har vi en lekeplass med trampoline, husker og andre lekeapparater. </p>
+
+<p>Fjordgløtt Camping ligger fint til ved Norefjorden, med gode fiskemuligheter både sommer og vinter (ørret og røyefiske). Mulighet for leie av båt. Fjordgløtt Camping grenser til Hardangervidda Nasjonalpark og mulighetene for turer til fots eller på ski er mange. Det er flere skisentre i nærheten: Uvdal, Dagali, Geilo og Vegglifjell.</p>
+<br>
+<br>
+Lurer du på mer? Send mail til <a href="mailto:post@fjordglott.net" target="_top">post@fjordglott.net</a>
+
+
+</p>
+
+</div>
+
+<br>
+
+<div style="text-align:center">
+  <h2>Bilder av campingen</h2>
+  <p>Click on the images below:</p>
+</div>
+
+<!-- The four columns -->
+<div class="row">
+  <div class="column">
+    <img src="camp1.jpg"  style="width:100%" onclick="myFunction(this);">
+  </div>
+
+  <div class="column">
+    <img src="camp2.jpg"  style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="camp3.jpg"  style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="camp4.jpg"  style="width:100%" onclick="myFunction(this);">
+  </div>
+</div>
+
+<div style="text-align:center">
+<div class="container">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <img id="expandedImg" style="width:800px">
+  <div id="imgtext"></div>
+</div>
+</div>
+
+<script>
+function myFunction(imgs) {
+    var expandImg = document.getElementById("expandedImg");
+    var imgText = document.getElementById("imgtext");
+    expandImg.src = imgs.src;
+    imgText.innerHTML = imgs.alt;
+    expandImg.parentElement.style.display = "block";
+}
+</script>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div id="nav-placeholder1">
+</div>
+
+<script>
+$(function(){
+  $("#nav-placeholder1").load("bottom.html");
+});
+</script>
+</body>
+
+</html>

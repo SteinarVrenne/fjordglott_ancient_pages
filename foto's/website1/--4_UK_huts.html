@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE></TITLE>
+<META NAME="GENERATOR" CONTENT="WEB! 2.0 Pro Extended Edition">
+<STYLE>
+#D0 {position:absolute;top:1px;left:1px;width:369px;height:668px;font-size:16px;color:#004000;font-family:arial;z-index:1;}
+#D0m {position:absolute;top:0;left:0;width:369px;height:668px;padding:10px;background:none;text-align:left;}
+#I10 {position:absolute;top:1px;left:378px;width:250px;height:180px;padding:10px;z-index:1;}
+</STYLE>
+<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+function catchError()
+{
+	return true;
+}
+
+window.onerror = catchError;
+
+</SCRIPT>
+<SCRIPT SRC="web.js" TYPE="text/javascript"></SCRIPT>
+</HEAD>
+<BODY  STYLE="background:#eafdb0;"  onLoad="loader();">
+<DIV  ID="D0" ><LAYER NAME="D0m" WIDTH="369" BORDER="10"><DIV ID="D0m"><U PARENT=D0>The Cabins:<BR><BR></U>In total there are 6 cabins on our campsite:<U PARENT=D0><BR></U>1x 6- 8 persons cabin<BR>2x: 2 persons cabin<BR>3x: 3-9 persons cabin<BR><BR>With the exception of the 2 persons cabins, all cabins are luxuriously equipped and perfectly suitable for a prolonged stay. All these cabins have a shower, toilet, kitchen, television, sitting area with a separate dining table and under floor heating. <BR><BR>The 3-6 persons cabins have 1 bedroom for 3 persons as well as a sofa bed in the living room. The 6-8 persons cabin has 2 bedrooms for 3 persons and an attic which suits 4 persons. <BR><BR>The kitchens are equipped with a refrigerator, hot plate, oven, cooker hood, automatic coffee maker and crockery. Furthermore the cabins are almost directly located at the fjord. From your own terrace you can enjoy the wonderful view of the Norefjord. <BR><BR>The 2- persons cabins are simply furnished with a bunk bed, sitting area, hot plate and a refrigerator. <BR><BR>You need to bring your own sheets, sleeping bags or duvets. Though you can also rent linen on the campsite.<BR><BR>Near all the cabins there is plenty of space to park one or more cars. <U PARENT=D0><BR></U></DIV></LAYER></DIV>
+<DIV  ID="I10"><IMG SRC="foto's/4-6_pers_hut_met_uitzicht.JPG" ID="I10image"  WIDTH="250"  HEIGHT="180"  ALT="3-6 pers hut"></DIV>
+<!-- DO NOT CHANGE THE SCRIPTS BELOW, WEB! WILL MALFUNCTION IF YOU DO! -->
+<SCRIPT LANGUAGE="JavaScript" ID="WEB!" TYPE="text/javascript">
+var IE = (navigator.appName=="Microsoft Internet Explorer") && (navigator.platform && navigator.platform == 'Win32');
+
+function newSlide(id,next,wait)
+{
+	this.id = id;
+	this.next = next;
+	this.wait = wait;
+	this.elems = new Array();
+	return this;
+}
+
+function newElement(id,next,wait,type,lightRed,lightGreen,lightBlue,lightStrength,waveAnim,waveDir,waves,filter)
+{
+	this.id = id;
+	this.next = next;
+	this.wait = wait;
+	this.type = type;
+	this.filter = filter;								
+
+	if(navigator.appName != 'Netscape')
+	{
+		document.all(id).style.filter = filter;
+		var dur_s = filter.indexOf('Duration=')+9;
+		var dur_e = filter.indexOf(',',dur_s);
+		document.all(id).filters(0).Duration = filter.substring(dur_s,dur_e)*1.0;
+		
+		if(document.all(id).style.filter.toLowerCase().indexOf("light(")!=-1)
+		{
+			document.all(id).filters.light.addAmbient(lightRed,lightGreen,lightBlue,lightStrength);
+		}
+
+		if(waveAnim=="true")
+		{
+			document.all(id).wave = wave;
+			document.all(id).wavedir = waveDir;
+			document.all(id).filters.wave.phase = (waveDir=="up")?0:95;
+			waves[waves.length] = id;
+		}	
+	}
+	
+	return this;
+}
+
+function loader()
+{
+	startMarquees();
+	if(navigator.appName != 'Netscape')
+		startWaves();
+	else	
+		transitions_netscape();
+
+	start();
+}
+
+function wave()
+{
+	if(IE)
+	{
+		if(this.wavedir=="up" && this.filters.wave.phase<100)
+			this.filters.wave.phase = this.filters.wave.phase + 5 % 100;
+		else if(this.wavedir=="down" && this.filters.wave.phase>0)	
+			this.filters.wave.phase = this.filters.wave.phase - 5 % 100;
+		else if(this.wavedir=="up")
+			this.filters.wave.phase=0;
+		else if(this.wavedir=="down")
+			this.filters.wave.phase=95;
+
+		setTimeout(this.id + ".wave()",40);	
+	}
+}
+
+
+var wavesElements = new Array();
+var slides = new Array();
+var marquees = new Object();
+
+//start slide 0
+slides[0] = new newSlide("SL0","timer","0");
+slides[0].elems[0] = new newElement("D0", "timer", "0.0", "div", "255", "0", "0", "50", "false", "up", wavesElements, "revealtrans(Duration=0,Transition=0) ");
+slides[0].elems[1] = new newElement("I10", "timer", "0.0", "image", "255", "0", "0", "50", "false", "up", wavesElements, "revealtrans(Duration=0,Transition=0) ");
+//end slide 0
+
+function changeImage(img,loc)
+{if(IE)
+document.all(img+"image").src = loc;
+else
+
+document.layers[img].document.images[0].src = loc;
+}
+function startMarquees()
+{
+}
+</SCRIPT>
+</BODY>
+</HTML>

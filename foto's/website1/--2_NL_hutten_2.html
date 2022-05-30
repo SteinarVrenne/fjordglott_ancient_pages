@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE></TITLE>
+<META NAME="GENERATOR" CONTENT="WEB! 2.0 Pro Extended Edition">
+<STYLE>
+#D0 {position:absolute;top:1px;left:1px;width:369px;height:686px;font-size:16px;color:#004000;font-family:arial;z-index:1;}
+#D0m {position:absolute;top:0;left:0;width:369px;height:686px;padding:10px;background:none;text-align:left;}
+#I10 {position:absolute;top:1px;left:378px;width:250px;height:180px;padding:10px;z-index:1;}
+</STYLE>
+<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+function catchError()
+{
+	return true;
+}
+
+window.onerror = catchError;
+
+</SCRIPT>
+<SCRIPT SRC="web.js" TYPE="text/javascript"></SCRIPT>
+</HEAD>
+<BODY  STYLE="background:#eafdb0;"  onLoad="loader();">
+<DIV  ID="D0" ><LAYER NAME="D0m" WIDTH="369" BORDER="10"><DIV ID="D0m"><U PARENT=D0>De Hutten.<BR><BR></U>Er zijn in totaal 6 hutten (ook bungalows of challets) op de camping aanwezig. <BR>1x: &nbsp;6-8 persoons hut<BR>3x: &nbsp;3-6 persoons hut<BR>2x: &nbsp;2 persoons hut<BR><BR>Met uitzondering van de 2 persoons hutten zijn alle huisjes zeer luxe uitgevoerd en zijn prima geschikt voor een langdurig verblijf. Zo zijn deze hutten uitgerust met douche, toilet, vloerverwarming, keuken, zithoek, aparte eettafel, televisie etc.<BR><BR>De 3-6 persoons hutten hebben 1 slaapkamer voor 3 personen evenals een slaapbank in de woonkamer.De 6-8 persoons hut heeft 2 slaapkamers voor 3 personen en een zolder waar 4 personen kunnen slapen.<BR><BR>De keukens zijn voorzien van een koelkast, kookplaat, oven, afzuigkap, koffiezetapparaat en servies. De hutten liggen vrijwel direct aan het fjord. Vanaf uw eigen terras kunt u genieten van het heerlijke uitzicht over het Norefjord. <BR><BR>De 2 persoons hutten zijn eenvoudig uitgevoerd met een stapelbed, eenvoudige zithoek, een kookplaat en een koelkast. <BR><BR>U dient uw eigen beddengoed zoals lakens en matras overtrekken mee te nemen. U kunt eventueel wel een linnenpakket bij ons huren. <BR><BR>Bij alle hutten is er volop ruimte om 1 of meer auto's te parkeren. </DIV></LAYER></DIV>
+<DIV  ID="I10"><IMG SRC="foto's/4-6_pers_hut_met_uitzicht.JPG" ID="I10image"  WIDTH="250"  HEIGHT="180"  ALT="3-6 pers hut"></DIV>
+<!-- DO NOT CHANGE THE SCRIPTS BELOW, WEB! WILL MALFUNCTION IF YOU DO! -->
+<SCRIPT LANGUAGE="JavaScript" ID="WEB!" TYPE="text/javascript">
+var IE = (navigator.appName=="Microsoft Internet Explorer") && (navigator.platform && navigator.platform == 'Win32');
+
+function newSlide(id,next,wait)
+{
+	this.id = id;
+	this.next = next;
+	this.wait = wait;
+	this.elems = new Array();
+	return this;
+}
+
+function newElement(id,next,wait,type,lightRed,lightGreen,lightBlue,lightStrength,waveAnim,waveDir,waves,filter)
+{
+	this.id = id;
+	this.next = next;
+	this.wait = wait;
+	this.type = type;
+	this.filter = filter;								
+
+	if(navigator.appName != 'Netscape')
+	{
+		document.all(id).style.filter = filter;
+		var dur_s = filter.indexOf('Duration=')+9;
+		var dur_e = filter.indexOf(',',dur_s);
+		document.all(id).filters(0).Duration = filter.substring(dur_s,dur_e)*1.0;
+		
+		if(document.all(id).style.filter.toLowerCase().indexOf("light(")!=-1)
+		{
+			document.all(id).filters.light.addAmbient(lightRed,lightGreen,lightBlue,lightStrength);
+		}
+
+		if(waveAnim=="true")
+		{
+			document.all(id).wave = wave;
+			document.all(id).wavedir = waveDir;
+			document.all(id).filters.wave.phase = (waveDir=="up")?0:95;
+			waves[waves.length] = id;
+		}	
+	}
+	
+	return this;
+}
+
+function loader()
+{
+	startMarquees();
+	if(navigator.appName != 'Netscape')
+		startWaves();
+	else	
+		transitions_netscape();
+
+	start();
+}
+
+function wave()
+{
+	if(IE)
+	{
+		if(this.wavedir=="up" && this.filters.wave.phase<100)
+			this.filters.wave.phase = this.filters.wave.phase + 5 % 100;
+		else if(this.wavedir=="down" && this.filters.wave.phase>0)	
+			this.filters.wave.phase = this.filters.wave.phase - 5 % 100;
+		else if(this.wavedir=="up")
+			this.filters.wave.phase=0;
+		else if(this.wavedir=="down")
+			this.filters.wave.phase=95;
+
+		setTimeout(this.id + ".wave()",40);	
+	}
+}
+
+
+var wavesElements = new Array();
+var slides = new Array();
+var marquees = new Object();
+
+//start slide 0
+slides[0] = new newSlide("SL0","timer","0");
+slides[0].elems[0] = new newElement("D0", "timer", "0.0", "div", "255", "0", "0", "50", "false", "up", wavesElements, "revealtrans(Duration=0,Transition=0) ");
+slides[0].elems[1] = new newElement("I10", "timer", "0.0", "image", "255", "0", "0", "50", "false", "up", wavesElements, "revealtrans(Duration=0,Transition=0) ");
+//end slide 0
+
+function changeImage(img,loc)
+{if(IE)
+document.all(img+"image").src = loc;
+else
+
+document.layers[img].document.images[0].src = loc;
+}
+function startMarquees()
+{
+}
+</SCRIPT>
+</BODY>
+</HTML>

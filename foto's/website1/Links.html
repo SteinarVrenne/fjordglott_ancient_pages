@@ -1,0 +1,141 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE></TITLE>
+<META NAME="GENERATOR" CONTENT="WEB! 2.0 Pro Extended Edition">
+<STYLE>
+#D0 {position:absolute;top:13px;left:30px;width:234px;height:108px;font-size:19px;color:#004000;font-family:arial;z-index:0;}
+#D0m {position:absolute;top:0;left:0;width:234px;height:108px;padding:10px;background:none;text-align:left;}
+#I1 {position:absolute;top:45px;left:257px;width:90px;height:85px;padding:10px;z-index:0;cursor:hand;}
+#I3 {position:absolute;top:47px;left:6px;width:97px;height:85px;padding:10px;z-index:1;cursor:hand;}
+#I9 {position:absolute;top:46px;left:123px;width:96px;height:88px;padding:10px;z-index:1;cursor:hand;}
+#I11 {position:absolute;top:138px;left:48px;width:242px;height:96px;padding:10px;z-index:1;cursor:hand;}
+#I10 {position:absolute;top:342px;left:25px;width:114px;height:70px;padding:10px;z-index:1;cursor:hand;}
+#I12 {position:absolute;top:348px;left:262px;width:60px;height:63px;padding:10px;z-index:1;cursor:hand;}
+#I13 {position:absolute;top:244px;left:3px;width:339px;height:84px;padding:10px;z-index:1;cursor:hand;}
+#I14 {position:absolute;top:348px;left:143px;width:108px;height:103px;padding:10px;z-index:1;cursor:hand;}
+</STYLE>
+<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+function catchError()
+{
+	return true;
+}
+
+window.onerror = catchError;
+
+</SCRIPT>
+<SCRIPT SRC="web.js" TYPE="text/javascript"></SCRIPT>
+</HEAD>
+<BODY  STYLE="background:#eafdb0;"  onLoad="loader();">
+<DIV  ID="D0" ><LAYER NAME="D0m" WIDTH="234" BORDER="10"><DIV ID="D0m"><U PARENT=D0>Links.</U></DIV></LAYER></DIV>
+<DIV  ID="I1"><A HREF="http://www.numedal.net" TARGET="_blank" ><IMG SRC="foto's/numedal_logo.gif" ID="I1image"  WIDTH="90"  HEIGHT="85"  ALT="" BORDER=0></A></DIV>
+<DIV  ID="I3"><A HREF="http://www.langedrag.no" TARGET="_self" ><IMG SRC="foto's/langedrag_logo.jpg" ID="I3image"  WIDTH="97"  HEIGHT="85"  ALT="" BORDER=0></A></DIV>
+<DIV  ID="I9"><A HREF="http://www.met.no" TARGET="_self" ><IMG SRC="foto's/weer.gif" ID="I9image"  WIDTH="96"  HEIGHT="88"  ALT="vaeret / weer / weather" BORDER=0></A></DIV>
+<DIV  ID="I11"><A HREF="http://www.visituvdal.no" TARGET="_self" ><IMG SRC="foto's/visituvdal.jpg" ID="I11image"  WIDTH="242"  HEIGHT="96"  ALT="Visit Uvdal" BORDER=0></A></DIV>
+<DIV  ID="I10"><A HREF="http://www.bobilforeningen.no" TARGET="_self" ><IMG SRC="foto's/logo_bobilforening.gif" ID="I10image"  WIDTH="114"  HEIGHT="70"  ALT="Norsk Bobilforening" BORDER=0></A></DIV>
+<DIV  ID="I12"><A HREF="http://www.kampeerauto.nl" TARGET="_self" ><IMG SRC="foto's/nkclogo1.jpg" ID="I12image"  WIDTH="60"  HEIGHT="63"  ALT="Nederlandse Kampeerautoclub" BORDER=0></A></DIV>
+<DIV  ID="I13"><A HREF="http://www.dagaliopplevelser.no" TARGET="_self" ><IMG SRC="foto's/Dagali opplevelser.jpg" ID="I13image"  WIDTH="339"  HEIGHT="84"  ALT="Dagali Opplevelser, rafting, motorsport and skiing" BORDER=0></A></DIV>
+<DIV  ID="I14"><A HREF="http://www.rondjenoorwegen.nl" TARGET="_self" ><IMG SRC="foto's/rondje2.jpg" ID="I14image"  WIDTH="108"  HEIGHT="103"  ALT="Rondje Noorwegen" BORDER=0></A></DIV>
+<!-- DO NOT CHANGE THE SCRIPTS BELOW, WEB! WILL MALFUNCTION IF YOU DO! -->
+<SCRIPT LANGUAGE="JavaScript" ID="WEB!" TYPE="text/javascript">
+var IE = (navigator.appName=="Microsoft Internet Explorer") && (navigator.platform && navigator.platform == 'Win32');
+
+function newSlide(id,next,wait)
+{
+	this.id = id;
+	this.next = next;
+	this.wait = wait;
+	this.elems = new Array();
+	return this;
+}
+
+function newElement(id,next,wait,type,lightRed,lightGreen,lightBlue,lightStrength,waveAnim,waveDir,waves,filter)
+{
+	this.id = id;
+	this.next = next;
+	this.wait = wait;
+	this.type = type;
+	this.filter = filter;								
+
+	if(navigator.appName != 'Netscape')
+	{
+		document.all(id).style.filter = filter;
+		var dur_s = filter.indexOf('Duration=')+9;
+		var dur_e = filter.indexOf(',',dur_s);
+		document.all(id).filters(0).Duration = filter.substring(dur_s,dur_e)*1.0;
+		
+		if(document.all(id).style.filter.toLowerCase().indexOf("light(")!=-1)
+		{
+			document.all(id).filters.light.addAmbient(lightRed,lightGreen,lightBlue,lightStrength);
+		}
+
+		if(waveAnim=="true")
+		{
+			document.all(id).wave = wave;
+			document.all(id).wavedir = waveDir;
+			document.all(id).filters.wave.phase = (waveDir=="up")?0:95;
+			waves[waves.length] = id;
+		}	
+	}
+	
+	return this;
+}
+
+function loader()
+{
+	startMarquees();
+	if(navigator.appName != 'Netscape')
+		startWaves();
+	else	
+		transitions_netscape();
+
+	start();
+}
+
+function wave()
+{
+	if(IE)
+	{
+		if(this.wavedir=="up" && this.filters.wave.phase<100)
+			this.filters.wave.phase = this.filters.wave.phase + 5 % 100;
+		else if(this.wavedir=="down" && this.filters.wave.phase>0)	
+			this.filters.wave.phase = this.filters.wave.phase - 5 % 100;
+		else if(this.wavedir=="up")
+			this.filters.wave.phase=0;
+		else if(this.wavedir=="down")
+			this.filters.wave.phase=95;
+
+		setTimeout(this.id + ".wave()",40);	
+	}
+}
+
+
+var wavesElements = new Array();
+var slides = new Array();
+var marquees = new Object();
+
+//start slide 0
+slides[0] = new newSlide("SL0","timer","0");
+slides[0].elems[0] = new newElement("D0", "timer", "0.0", "div", "255", "0", "0", "50", "false", "up", wavesElements, "revealtrans(Duration=0,Transition=0) ");
+slides[0].elems[1] = new newElement("I1", "timer", "0.0", "image", "255", "0", "0", "50", "false", "up", wavesElements, "revealtrans(Duration=0,Transition=0) ");
+slides[0].elems[2] = new newElement("I3", "timer", "0.0", "image", "255", "0", "0", "50", "false", "up", wavesElements, "revealtrans(Duration=0,Transition=0) ");
+slides[0].elems[3] = new newElement("I9", "timer", "0.0", "image", "255", "0", "0", "50", "false", "up", wavesElements, "revealtrans(Duration=0,Transition=0) ");
+slides[0].elems[4] = new newElement("I11", "timer", "0.0", "image", "255", "0", "0", "50", "false", "up", wavesElements, "revealtrans(Duration=0,Transition=0) ");
+slides[0].elems[5] = new newElement("I10", "timer", "0.0", "image", "255", "0", "0", "50", "false", "up", wavesElements, "revealtrans(Duration=0,Transition=0) ");
+slides[0].elems[6] = new newElement("I12", "timer", "0.0", "image", "255", "0", "0", "50", "false", "up", wavesElements, "revealtrans(Duration=0,Transition=0) ");
+slides[0].elems[7] = new newElement("I13", "timer", "0.0", "image", "255", "0", "0", "50", "false", "up", wavesElements, "revealtrans(Duration=0,Transition=0) ");
+//end slide 0
+
+function changeImage(img,loc)
+{if(IE)
+document.all(img+"image").src = loc;
+else
+
+document.layers[img].document.images[0].src = loc;
+}
+function startMarquees()
+{
+}
+</SCRIPT>
+</BODY>
+</HTML>
