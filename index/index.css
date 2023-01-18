@@ -1,0 +1,29 @@
+p.information-text {
+  font-size: 15px;
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+  /* font-weight: bold; */
+  text-align: center;
+
+  margin: auto;
+  /* Make width certain size of screen and full scale when the screen is small enough */
+  max-width: 70%;
+  min-width: 0.5vw;
+}
+
+.hero-image {
+  /* width: 50%; */
+  height: 42vh;
+  object-fit: cover;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 768px) {
+  p.information-text {
+    width: fit-content;
+  }
+
+  .hero-image {
+    width: 80%;
+  }
+}
