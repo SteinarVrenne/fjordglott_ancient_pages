@@ -2,13 +2,15 @@ p.information-text {
   font-size: 15px;
   color: #000;
   font-family: Arial, Helvetica, sans-serif;
-  /* font-weight: bold; */
   text-align: center;
 
   margin: auto;
-  /* Make width certain size of screen and full scale when the screen is small enough */
-  max-width: 70%;
-  min-width: 0.5vw;
+  text-align: center;
+  margin: 0 10%;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 .hero-image {
@@ -18,12 +20,23 @@ p.information-text {
   margin-bottom: 24px;
 }
 
+/* Responsive styles */
 @media (max-width: 768px) {
   p.information-text {
     width: fit-content;
+    margin: 0;
   }
 
-  .hero-image {
-    width: 80%;
+  .responsive-text {
+    font-size: 14px;
   }
+}
+
+.textcenter {
+  text-align: center;
+  margin: 0 20%;
+}
+
+.responsive-text {
+  font-size: 16px;
 }
